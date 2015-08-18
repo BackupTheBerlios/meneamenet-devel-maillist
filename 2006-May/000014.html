@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Meneamenet-devel] Subversion
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/meneamenet-devel/2006-May/index.html" >
+   <LINK REL="made" HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Subversion&In-Reply-To=%3C445C8B40.1000700%40inxenio.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000013.html">
+   <LINK REL="Next"  HREF="000015.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Meneamenet-devel] Subversion</H1>
+    <B>jose ramon</B> 
+    <A HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Subversion&In-Reply-To=%3C445C8B40.1000700%40inxenio.com%3E"
+       TITLE="[Meneamenet-devel] Subversion">joseramon at inxenio.com
+       </A><BR>
+    <I>Sat May  6 13:40:48 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000013.html">[Meneamenet-devel] Subversion
+</A></li>
+        <LI>Next message: <A HREF="000015.html">[Meneamenet-devel] Subversion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14">[ date ]</a>
+              <a href="thread.html#14">[ thread ]</a>
+              <a href="subject.html#14">[ subject ]</a>
+              <a href="author.html#14">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Jes&#250;s GS escribi&#243;:
+
+buenas, &#191;el checkout solo se pude hacer como usuario anonimo por el momento?
+
+tampoco me van los accesos anonimos, me pone esto:
+svn: URL '<A HREF="svn://svn.berlios.de/meneamenet/trunk">svn://svn.berlios.de/meneamenet/trunk</A>' doesn't exist
+
+
+gracias y un saludo
+&gt;<i> On 5/6/06, Javier Carranza &lt;<A HREF="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">debian at eurodev.net</A>&gt; wrote:
+</I>&gt;<i>   
+</I>&gt;&gt;<i> El Friday 05 Mayo 2006 19:30, Paco Ros escribi&#243;:
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> Primero saludos a todos de la lista! :D.
+</I>&gt;<i>
+</I>&gt;<i> El tiempo es un problema pero mi intenci&#243;n es aportar algo al
+</I>&gt;<i> desarrollo de meneamenet :) (se sacar&#225; tiempo de donde sea ;)
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>&gt;&gt;&gt;<i> Hola, &#191;Me pod&#233;is pasar la URL del sobversi&#243;n para hacer un checkout?
+</I>&gt;&gt;&gt;<i>       
+</I>&gt;<i> Comento el problema que he tenido por si a alguien le pasa lo mismo.
+</I>&gt;<i>
+</I>&gt;<i> Teoricamente ser&#237;an svn checkout
+</I>&gt;<i> &quot;<A HREF="svn://svn.berlios.de/meneamenet/trunk">svn://svn.berlios.de/meneamenet/trunk</A>&quot; o &quot;svn checkout
+</I>&gt;<i> <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/trunk</A>&quot; seg&#250;n la p&#225;gina
+</I>&gt;<i> de ayuda. Pero ambas son incorrectas
+</I>&gt;<i>
+</I>&gt;<i> [<A HREF="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">blaxter at helicon</A>]:~/dev$ svn checkout <A HREF="svn://svn.berlios.de/meneamenet/trunk">svn://svn.berlios.de/meneamenet/trunk</A>
+</I>&gt;<i> svn: File not found: revision 1, path '/trunk'
+</I>&gt;<i>
+</I>&gt;<i> Pero bueno, si miramos la url que hay para navegar por el repositorio
+</I>&gt;<i> via navegador, vemos que en realidad esa url es diferente,
+</I>&gt;<i> concretamente  <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk</A>
+</I>&gt;<i> (un meneame antes de trunk)
+</I>&gt;<i>
+</I>&gt;<i> $ svn checkout <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk</A>
+</I>&gt;<i> y ya tenemos nuestro checkout listo :)
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>&gt;&gt;<i>         Ya estaba comentado en el primer[1] mensaje de presentaci&#243;n del proyecto a la
+</I>&gt;&gt;<i> lista de edulix. La url concreta para conseguir la informaci&#243;n de
+</I>&gt;&gt;<i> configuraci&#243;n del cliente svn para este proyecto la tienes en [2]
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>         [1] <A HREF="https://lists.berlios.de/pipermail/meneamenet-devel/2006-May/000001.html">https://lists.berlios.de/pipermail/meneamenet-devel/2006-May/000001.html</A>
+</I>&gt;&gt;<i>         [2] <A HREF="https://developer.berlios.de/svn/?group_id=6593">https://developer.berlios.de/svn/?group_id=6593</A>
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> salu2
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Meneamenet-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">Meneamenet-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/meneamenet-devel">http://lists.berlios.de/mailman/listinfo/meneamenet-devel</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000013.html">[Meneamenet-devel] Subversion
+</A></li>
+	<LI>Next message: <A HREF="000015.html">[Meneamenet-devel] Subversion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#14">[ date ]</a>
+              <a href="thread.html#14">[ thread ]</a>
+              <a href="subject.html#14">[ subject ]</a>
+              <a href="author.html#14">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">More information about the Meneamenet-devel
+mailing list</a><br>
+</body></html>

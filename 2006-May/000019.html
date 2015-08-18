@@ -1,0 +1,271 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Meneamenet-devel] Little parche y Tutorial - Social Bar e instalaci&#243;n
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/meneamenet-devel/2006-May/index.html" >
+   <LINK REL="made" HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20%3D%3Fiso-8859-1%3FQ%3FLittle_parche_y_Tutorial_-_Social_Bar_e_instalaci%3DF3n%3F%3D&In-Reply-To=%3C000b01c6727e%24b1757af0%243200a8c0%40EOLO%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000017.html">
+   <LINK REL="Next"  HREF="000021.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Meneamenet-devel] Little parche y Tutorial - Social Bar e instalaci&#243;n</H1>
+    <B>Marcos Besteiro</B> 
+    <A HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20%3D%3Fiso-8859-1%3FQ%3FLittle_parche_y_Tutorial_-_Social_Bar_e_instalaci%3DF3n%3F%3D&In-Reply-To=%3C000b01c6727e%24b1757af0%243200a8c0%40EOLO%3E"
+       TITLE="[Meneamenet-devel] Little parche y Tutorial - Social Bar e instalaci&#243;n">marcosbl at gmail.com
+       </A><BR>
+    <I>Mon May  8 11:06:27 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000017.html">[Meneamenet-devel] Cliente SVN Windows
+</A></li>
+        <LI>Next message: <A HREF="000021.html">[Meneamenet-devel] Etiqueta no cache en meneame
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Saludos a todos... colaboro con un peque&#241;o parche para agregar marcadores
+sociales y un tutorial que he creado sobre la instalaci&#243;n de Men&#233;ame (por si
+sirve para la documentaci&#243;n) enlazando a una instalaci&#243;n de prueba con el
+css de Men&#233;ame en  &lt;<A HREF="http://www.noticias-y-actualidad.com/instalacion.php">http://www.noticias-y-actualidad.com/instalacion.php</A>&gt;
+<A HREF="http://www.noticias-y-actualidad.com/instalacion.php">http://www.noticias-y-actualidad.com/instalacion.php</A>
+
+ 
+
+Puedes ver en acci&#243;n la barra de marcadores sociales, en el mismo
+&lt;<A HREF="http://www.noticias-y-actualidad.com/">http://www.noticias-y-actualidad.com/</A>&gt;
+<A HREF="http://www.noticias-y-actualidad.com/">http://www.noticias-y-actualidad.com/</A> , tanto en portada como en la propia
+noticia, usando el enlace &quot;a&#241;adir a marcadores&quot;.
+
+ 
+
+M&#225;s o menos funciona de la siguiente forma:
+
+Para cada enlace se muestra el texto &quot;a&#241;adir a marcadores&quot; enlazado a una
+funcion javascript en el siguiente formato:
+
+ 
+
+social_bar(url,titulo,id)
+
+ 
+
+Ej: social_bar('<A HREF="http://www.noticias-y-actualidad.com/">http://www.noticias-y-actualidad.com/</A>','Preparando Mod de
+marcadores sociales para Men&#233;ame','4')
+
+ 
+
+&#191; Por qu&#233; en js en vez de poner directamente los enlaces ? Por dos motivos,
+ahorrar ancho de banda al no tener que reescribir en el c&#243;digo mil veces lo
+mismo, y porque as&#237; de entrada no se ve la barra con los enlaces salvo que
+pulses adrede para verla, lo que seguro que ahorra un aspecto visual
+sobrecargado y &quot;cienes y cienes&quot; de kbs de transferencia
+
+ 
+
+Cuando el usuario pulsa en el enlace, se hace una llamada ajax similar a la
+que realiza la funci&#243;n menealo() que le pasa a un fichero social.php tres
+par&#225;metros, url, titulo de la noticia, y n&#186; de capa.
+
+Las dos primeras se explican solas, la tercera es para que la barra salga
+donde debe en la p&#225;gina inicial, en las b&#250;squedas, etc... donde hay m&#225;s de
+una posible barra porque hay m&#225;s de una noticia visible, vamos.
+
+ 
+
+Este social.php se encarga de construir el html necesario para mostrar la
+barra con todos los enlaces, que se muestra entonces en la capa con
+id=&quot;social_barX&quot; donde X es el n&#186; de capa que le hemos pasado antes.
+
+ 
+
+Imagino que me explico de forma bastante pobre, pero vamos, en la p&#225;gina
+podeis ver el efecto de forma sencilla.
+
+ 
+
+Para conseguirlo s&#243;lo hay que:
+
+ 
+
+- A&#241;adir dos lineas en el link.php para generar el enlace y las capas de las
+barras, que en principio permanecen ocultas hasta que se hace click.
+
+- Subir el social.php, que contiene el array de sitios a crear, ahora mismo
+es una lista fija basada en sociable ( &lt;<A HREF="http://push.cx/sociable">http://push.cx/sociable</A>&gt;
+<A HREF="http://push.cx/sociable">http://push.cx/sociable</A>), pero seria facil hacerla personalizada por usuario
+(que en su ficha pudiesen marcar/desmarcar los que quisieran o no, o incluso
+a&#241;adir el suyo propio si lo tienen hosteado, como los usuarios de sabrosus,
+que ya ser&#237;a elnovam&#225;s
+
+- A&#241;adir una funci&#243;n javascript en cualquiera de los js ya existentes.
+
+ 
+
+Es s&#243;lo una primera prueba que ya envi&#233; al wiki, pero antes de tocarla m&#225;s,
+a ver si os parece bien y creeis que merece la pena implementarla.
+
+ 
+
+Es curioso encontrarse al menos dos conocidos entre los 10 suscritos:
+jotabe, ber.to, saluditos
+
+ 
+
+*.* , lo mismo,  :D
+
+ 
+
+ 
+
+/////////////////////////////////////
+
+ 
+
+Relaci&#243;n de cambios:
+
+----------------------------------------------------------------
+
+En el libs/link.php  he modificado
+
+ 
+
+echo '&lt;span class=&quot;tool&quot;&gt;'._('en'). ' &lt;a
+href=&quot;./index.php?category='.$this-&gt;category.'&quot;
+title=&quot;'._('categor&#195;a').'&quot;&gt;'.$this-&gt;category_name().'&lt;/a&gt;&lt;/span&gt;'; 
+
+// Allow to modify it
+
+ 
+
+insertando justo antes del // Allow to modify it lo siguiente:
+
+ 
+
+echo '&lt;span class=&quot;tool&quot;&gt;&lt;a
+href=&quot;javascript:social_bar(\''.$this-&gt;url.'\',\''.$this-&gt;title.'\',\''.$thi
+s-&gt;id.'\')&quot;&gt;'._('a&#195;&#177;adir a marcadores').'&lt;/a&gt;&lt;/span&gt;';
+
+echo '&lt;span id=&quot;social_bar'.$this-&gt;id.'&quot;
+style=&quot;color:#eee;width:100%;float:left;display:none;&quot;&gt; &lt;/span&gt;';
+
+----------------------------------------------------------------
+
+En el /js/xmlhttp02.js he a&#241;adido al final de todo:
+
+ 
+
+function social_bar(url,title,id) {
+
+elemento=document.getElementById('social_bar'+id);
+
+elemento.style.display = 'block';
+
+elemento.innerHTML = 'cargando marcadores...';
+
+if (window.XMLHttpRequest) {
+
+req = new XMLHttpRequest();
+
+req.onreadystatechange = function() {social_bar_done(id);};
+
+req.open(&quot;GET&quot;, './libs/social.php?url='+url+'&amp;title='+title, true);
+
+req.send(null);
+
+} else if (window.ActiveXObject) {
+
+req = new ActiveXObject(&quot;Microsoft.XMLHTTP&quot;);
+
+if (req) {
+
+req.onreadystatechange = function() {social_bar_done(id);};
+
+req.open(&quot;GET&quot;, './libs/social.php?url='+url+'&amp;title='+title, true);
+
+req.send();
+
+}
+
+}
+
+} 
+
+function social_bar_done(id) {
+
+elemento=document.getElementById('social_bar'+id);
+
+if (req.readyState == 4) {
+
+if (req.status == 200) {
+
+results = req.responseText;
+
+elemento.innerHTML = results;
+
+} else {
+
+elemento.innerHTML=&quot;Error cargando:\n&quot; +
+
+req.statusText;
+
+}
+
+}
+
+}
+
+----------------------------------------------------------------
+
+Y ya por &#250;ltimo he a&#241;adido en /libs el social.php ( /libs/social.php ) que
+va adjunto y los iconos gr&#225;ficos en /img/social ( /img/social/blinkbits.png
+por ejemplo ), tambien van adjuntos en un zip ( iconos.zip )
+
+ 
+
+He adjuntado tambi&#233;n el MOD_link.php y el MOD_xmlhttp02.js por si no me he
+explicado bien en lo que he a&#241;adido.
+
+ 
+
+Y como al final no he podido adjuntar (l&#237;mite de 40 ks en los mensajes de
+esta lista
+ <A HREF="http://www.noticias-y-actualidad.com/parche.zip">http://www.noticias-y-actualidad.com/parche.zip</A>
+
+-------------- next part --------------
+An HTML attachment was scrubbed...
+URL: &lt;<A HREF="https://lists.berlios.de/pipermail/meneamenet-devel/attachments/20060508/b74ce35f/attachment.html">https://lists.berlios.de/pipermail/meneamenet-devel/attachments/20060508/b74ce35f/attachment.html</A>&gt;
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000017.html">[Meneamenet-devel] Cliente SVN Windows
+</A></li>
+	<LI>Next message: <A HREF="000021.html">[Meneamenet-devel] Etiqueta no cache en meneame
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#19">[ date ]</a>
+              <a href="thread.html#19">[ thread ]</a>
+              <a href="subject.html#19">[ subject ]</a>
+              <a href="author.html#19">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">More information about the Meneamenet-devel
+mailing list</a><br>
+</body></html>

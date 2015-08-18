@@ -1,0 +1,104 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Meneamenet-devel] Rama actualizada
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/meneamenet-devel/2006-May/index.html" >
+   <LINK REL="made" HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Rama%20actualizada&In-Reply-To=%3C200605270328.58448.debian%40eurodev.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000027.html">
+   <LINK REL="Next"  HREF="000030.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Meneamenet-devel] Rama actualizada</H1>
+    <B>Javier Carranza</B> 
+    <A HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Rama%20actualizada&In-Reply-To=%3C200605270328.58448.debian%40eurodev.net%3E"
+       TITLE="[Meneamenet-devel] Rama actualizada">debian at eurodev.net
+       </A><BR>
+    <I>Sat May 27 03:28:57 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000027.html">[Meneamenet-devel] Subversion
+</A></li>
+        <LI>Next message: <A HREF="000030.html">[Meneamenet-devel] Rama actualizada
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#29">[ date ]</a>
+              <a href="thread.html#29">[ thread ]</a>
+              <a href="subject.html#29">[ subject ]</a>
+              <a href="author.html#29">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>	Hola a todos :)
+
+	He actualizado mi rama con todos los cambios que ten&#237;a pendientes de enviar 
+al svn. Los cambios que he a&#241;adido, aportand a meneame las siguientes 
+funcionalidades:
+
+	 + Frontend web para la gesti&#243;n de categor&#237;as.
+
+        + Modificaciones a crontab.in.example
+
+        + Opci&#243;n para anular comentarios (habilita/deshabilita globalmente los 
+comentarios al sitio).
+
+        + Personalizaci&#243;n del sitio en las cabeceras html.
+
+        + Publicaci&#243;n de enlaces para sindicaci&#243;n contenidos filtrando por 
+categor&#237;as o tags.
+
+	+ Importaci&#243;n autom&#225;tica de items desde las fuentes RSS que sean configuradas 
+por el administrador del sitio en la interfaz de gesti&#243;n de categor&#237;as.
+
+
+	Las categor&#237;as que se dan de alta en meneame con estos patches que he 
+enviado, pueden ser de dos tipos (no olvides actualizar la base de datos, que 
+sufre modificaciones para poder incluir esta funcionalidad. He modificado el 
+script sql que encontrareis en /archives/):
+
+	+ Categor&#237;as simples (como las habituales de meneame)
+	+ Categor&#237;as especiales (llevan asociada una fuente RSS y no son categor&#237;as 
+seleccionables por los usuarios del sitio para enviar enlaces. Su &#250;nica 
+funci&#243;n es la de agrupar los enlaces importados autom&#225;ticamente hacia el 
+meneame por el script de importaci&#243;n aggregator.php . Los usuarios luego 
+moderar&#225;n su salida a portada con las votaciones habituales).
+
+	Ale, pues eso es todo :) Creo que no me he dejado nada olvidado. De todas 
+formas, si alguno se atreve a probarlo :P que me avise si no funciona 
+cualquier funcionalidad, a ver si es que me he dejado algo colgado :)
+
+	P.D. Edulix, me he intentado suscribir dos veces a la lista meneame-svn, pero 
+no me llega el correo de confirmaci&#243;n :-?
+
+-- 
+Javier Carranza              <A HREF="http://www.eurodev.net/">http://www.eurodev.net/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000027.html">[Meneamenet-devel] Subversion
+</A></li>
+	<LI>Next message: <A HREF="000030.html">[Meneamenet-devel] Rama actualizada
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#29">[ date ]</a>
+              <a href="thread.html#29">[ thread ]</a>
+              <a href="subject.html#29">[ subject ]</a>
+              <a href="author.html#29">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">More information about the Meneamenet-devel
+mailing list</a><br>
+</body></html>

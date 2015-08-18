@@ -1,0 +1,27 @@
+From debian at eurodev.net  Sat Jun  3 15:15:38 2006
+From: debian at eurodev.net (Javier Carranza)
+Date: Sat, 3 Jun 2006 15:15:38 +0200
+Subject: [Meneamenet-devel] Nuevas mejoras
+Message-ID: <200606031515.41213.debian@eurodev.net>
+
+	He a?adido nuevas funcionalidades para meneame en mi rama de desarrollo. 
+Ahora, esta rama incorpora un nuevo sistema de promoci?n de enlaces basado en 
+una moderaci?n monousuario. A?n le quedan algunas pruebas y depuraci?n, pero 
+la interfaz de gesti?n para el moderador es completamente funcional.
+
+	La nueva interfaz shakeit incorpora AJAX a todo el contenido, de forma que la 
+promoci?n de enlaces a portada es totalmente autom?tica (al ser monousuario 
+s?lo se necesita un voto para pasar a portada, siendo innecesaria la 
+existencia de la tarea cron promote2.php). Adem?s de la publicaci?n 
+autom?tica a portada, las funcionalidades AJAX incorporadas hacen desaparecer 
+la noticia meneada de la p?gina, aplican un efecto persiana al resto de 
+noticias ineferiores haciendo que todas suban un escal?n en la lista de 
+noticias, e incorporan la primera noticia de la p?gina siguiente como ?ltima 
+de la actual.
+
+	Pues nada, que lo disfrute el que quiera usarlo ;)
+
+-- 
+Javier Carranza              http://www.eurodev.net/
+
+

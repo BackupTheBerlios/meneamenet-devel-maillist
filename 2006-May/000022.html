@@ -1,0 +1,141 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Meneamenet-devel] Subversion
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/meneamenet-devel/2006-May/index.html" >
+   <LINK REL="made" HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Subversion&In-Reply-To=%3C445FA551.4020300%40inxenio.com%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000020.html">
+   <LINK REL="Next"  HREF="000023.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Meneamenet-devel] Subversion</H1>
+    <B>jose ramon</B> 
+    <A HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Subversion&In-Reply-To=%3C445FA551.4020300%40inxenio.com%3E"
+       TITLE="[Meneamenet-devel] Subversion">joseramon at inxenio.com
+       </A><BR>
+    <I>Mon May  8 22:08:49 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000020.html">[Meneamenet-devel] Subversion
+</A></li>
+        <LI>Next message: <A HREF="000023.html">[Meneamenet-devel] Subversion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>Edulix escribi&#243;:
+
+me vuelve a fallar haciendo:
+
+svn checkout <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/trunk</A>
+
+y
+
+svn checkout <A HREF="svn://svn.berlios.de/svnroot/repos/meneamenet/trunk">svn://svn.berlios.de/svnroot/repos/meneamenet/trunk</A>
+
+&#191;puede deberse esto a los cambios de configuracion?
+
+saludos
+
+
+&gt;<i> El Saturday, 6 de Mayo de 2006 12:32, Jes&#250;s GS escribi&#243;:
+</I>&gt;<i>   
+</I>&gt;&gt;<i> Comento el problema que he tenido por si a alguien le pasa lo mismo.
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> Teoricamente ser&#237;an svn checkout
+</I>&gt;&gt;<i> &quot;<A HREF="svn://svn.berlios.de/meneamenet/trunk">svn://svn.berlios.de/meneamenet/trunk</A>&quot; o &quot;svn checkout
+</I>&gt;&gt;<i> <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/trunk</A>&quot; seg&#250;n la p&#225;gina
+</I>&gt;&gt;<i> de ayuda. Pero ambas son incorrectas
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> [<A HREF="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">blaxter at helicon</A>]:~/dev$ svn checkout <A HREF="svn://svn.berlios.de/meneamenet/trunk">svn://svn.berlios.de/meneamenet/trunk</A>
+</I>&gt;&gt;<i> svn: File not found: revision 1, path '/trunk'
+</I>&gt;&gt;<i> Pero bueno, si miramos la url que hay para navegar por el repositorio
+</I>&gt;&gt;<i> via navegador, vemos que en realidad esa url es diferente,
+</I>&gt;&gt;<i> concretamente  <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk</A>
+</I>&gt;&gt;<i> (un meneame antes de trunk)
+</I>&gt;&gt;<i>
+</I>&gt;&gt;<i> $ svn checkout <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/meneame/trunk</A>
+</I>&gt;&gt;<i> y ya tenemos nuestro checkout listo :)
+</I>&gt;&gt;<i>     
+</I>&gt;<i>
+</I>&gt;<i> Buenas tardes:
+</I>&gt;<i>
+</I>&gt;<i> Parece que ya hay varios que han tenido ese problema; la soluci&#243;n hasta ahora 
+</I>&gt;<i> era la que ha indicado Jes&#250;s GS en el mensaje de arriba. Ya me he dado cuenta 
+</I>&gt;<i> donde radicaba el fallo y ya basta con hacer:
+</I>&gt;<i>
+</I>&gt;<i> $ svn checkout <A HREF="http://svn.berlios.de/svnroot/repos/meneamenet/trunk">http://svn.berlios.de/svnroot/repos/meneamenet/trunk</A>
+</I>&gt;<i>
+</I>&gt;<i> tal y como indica la documentaci&#243;n de berlios ;-)
+</I>&gt;<i>
+</I>&gt;<i> He estado experimentando con el subversion bastante, pondr&#233; en el wikispaces 
+</I>&gt;<i> informaci&#243;n relacionada con el tema. Ahora mismo no puedo crear ninguna 
+</I>&gt;<i> branch porque necesito cambiar los permisos del repositorio, pero ya 
+</I>&gt;<i> anteriormente hab&#237;a conseguido crear una. 
+</I>&gt;<i>
+</I>&gt;<i> He creado otra lista de correo, <A HREF="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">meneamenet-svn at lists.berlios.de</A> (apuntaos!) 
+</I>&gt;<i> donde se mandar&#225;n autom&#225;ticamente los cambios realizados en subversi&#243;n. De 
+</I>&gt;<i> este modo podremos seguir la pista de lo que se vayan realizando f&#225;cilmente, 
+</I>&gt;<i> tanto en trunk como en las dem&#225;s ramas.
+</I>&gt;<i>
+</I>&gt;<i> Sin embargo hay algo que todav&#237;a me falta por ver, se trata de c&#243;mo manejar 
+</I>&gt;<i> los permisos de las distintas ramas; lo l&#243;gico ser&#237;a que cada uno s&#243;lo 
+</I>&gt;<i> puediese acceder a su propia rama, y que s&#243;lo a los de confianza se les diese 
+</I>&gt;<i> acceso a la principal (ya que ser&#225; la versi&#243;n que se use en meneame.net). De 
+</I>&gt;<i> este modo, a cualquiera que lo pida se le dar&#237;a una rama propia sin que 
+</I>&gt;<i> trunk/ corriese ning&#250;n riesgo. &#191;Ser&#225; esto posible sin tener que tocar los 
+</I>&gt;<i> ficheros de configuraci&#243;n de subversion de berlios, a los que obviamente no 
+</I>&gt;<i> tengo acceso? Quien sepa algo del tema que no se lo calle jeje
+</I>&gt;<i>
+</I>&gt;<i> Saludos,
+</I>&gt;<i>        Edulix.
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i> _______________________________________________
+</I>&gt;<i> Meneamenet-devel mailing list
+</I>&gt;<i> <A HREF="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">Meneamenet-devel at lists.berlios.de</A>
+</I>&gt;<i> <A HREF="http://lists.berlios.de/mailman/listinfo/meneamenet-devel">http://lists.berlios.de/mailman/listinfo/meneamenet-devel</A>
+</I>&gt;<i>
+</I>&gt;<i>
+</I>&gt;<i>   
+</I>
+
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000020.html">[Meneamenet-devel] Subversion
+</A></li>
+	<LI>Next message: <A HREF="000023.html">[Meneamenet-devel] Subversion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#22">[ date ]</a>
+              <a href="thread.html#22">[ thread ]</a>
+              <a href="subject.html#22">[ subject ]</a>
+              <a href="author.html#22">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">More information about the Meneamenet-devel
+mailing list</a><br>
+</body></html>

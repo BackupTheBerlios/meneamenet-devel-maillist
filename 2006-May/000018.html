@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+ <HEAD>
+   <TITLE> [Meneamenet-devel] Subversion
+   </TITLE>
+   <LINK REL="Index" HREF="http://lists.berlios.de/pipermail/meneamenet-devel/2006-May/index.html" >
+   <LINK REL="made" HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Subversion&In-Reply-To=%3C200605071313.37660.javier%40al.quimia.net%3E">
+   <META NAME="robots" CONTENT="index,nofollow">
+   <style type="text/css">
+       pre {
+           white-space: pre-wrap;       /* css-2.1, curent FF, Opera, Safari */
+           }
+   </style>
+   <META http-equiv="Content-Type" content="text/html; charset=us-ascii">
+   <LINK REL="Previous"  HREF="000016.html">
+   <LINK REL="Next"  HREF="000020.html">
+ </HEAD>
+ <BODY BGCOLOR="#ffffff">
+   <H1>[Meneamenet-devel] Subversion</H1>
+    <B>Javier Carranza</B> 
+    <A HREF="mailto:meneamenet-devel%40lists.berlios.de?Subject=Re%3A%20%5BMeneamenet-devel%5D%20Subversion&In-Reply-To=%3C200605071313.37660.javier%40al.quimia.net%3E"
+       TITLE="[Meneamenet-devel] Subversion">javier at quimia.net
+       </A><BR>
+    <I>Sun May  7 13:13:36 CEST 2006</I>
+    <P><UL>
+        <LI>Previous message: <A HREF="000016.html">[Meneamenet-devel] Subversion
+</A></li>
+        <LI>Next message: <A HREF="000020.html">[Meneamenet-devel] Subversion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18">[ date ]</a>
+              <a href="thread.html#18">[ thread ]</a>
+              <a href="subject.html#18">[ subject ]</a>
+              <a href="author.html#18">[ author ]</a>
+         </LI>
+       </UL>
+    <HR>  
+<!--beginarticle-->
+<PRE>El Saturday 06 Mayo 2006 19:55, Edulix escribi&#243;:
+&gt;<i>
+</I>&gt;<i> Sin embargo hay algo que todav&#237;a me falta por ver, se trata de c&#243;mo manejar
+</I>&gt;<i> los permisos de las distintas ramas; lo l&#243;gico ser&#237;a que cada uno s&#243;lo
+</I>&gt;<i> puediese acceder a su propia rama, y que s&#243;lo a los de confianza se les
+</I>&gt;<i> diese acceso a la principal (ya que ser&#225; la versi&#243;n que se use en
+</I>&gt;<i> meneame.net). De este modo, a cualquiera que lo pida se le dar&#237;a una rama
+</I>&gt;<i> propia sin que trunk/ corriese ning&#250;n riesgo. &#191;Ser&#225; esto posible sin tener
+</I>&gt;<i> que tocar los ficheros de configuraci&#243;n de subversion de berlios, a los que
+</I>&gt;<i> obviamente no tengo acceso? Quien sepa algo del tema que no se lo calle
+</I>&gt;<i> jeje
+</I>
+	Esto depende de c&#243;mo est&#233; configurada la plataforma gforge y el acceso para 
+los administradores a la plataforma en berlios. En cada plataforma gforge se 
+crea un repositorio subversion independiente para cada proyecto. Generalmente 
+se localizan en /svnroot y dentro de este directorio se encontrar&#225;n los homes 
+independientes del svn de cada proyecto. En cada uno de esos homes, hay un 
+directorio conf con su correspondiente fichero svnserve.conf de 
+configuraci&#243;n, donde podr&#237;as establecer permisos por ramas y usuarios.
+
+-- 
+Javier Carranza              <A HREF="http://al.quimia.net/">http://al.quimia.net/</A> | <A HREF="http://www.eurodev.net/">http://www.eurodev.net/</A>
+
+</PRE>
+
+<!--endarticle-->
+    <HR>
+    <P><UL>
+        <!--threads-->
+	<LI>Previous message: <A HREF="000016.html">[Meneamenet-devel] Subversion
+</A></li>
+	<LI>Next message: <A HREF="000020.html">[Meneamenet-devel] Subversion
+</A></li>
+         <LI> <B>Messages sorted by:</B> 
+              <a href="date.html#18">[ date ]</a>
+              <a href="thread.html#18">[ thread ]</a>
+              <a href="subject.html#18">[ subject ]</a>
+              <a href="author.html#18">[ author ]</a>
+         </LI>
+       </UL>
+
+<hr>
+<a href="https://lists.berlios.de/mailman/listinfo/meneamenet-devel">More information about the Meneamenet-devel
+mailing list</a><br>
+</body></html>
